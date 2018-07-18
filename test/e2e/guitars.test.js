@@ -59,8 +59,8 @@ describe('Guitars API', () => {
             });
     });
 
-    it.skip('returns false if deleting a nonexistent guitar', () => {
-        return request.delete('/api/guitars/583d03a33b6393b3bdfd33106f1')
+    it('returns false if deleting a nonexistent guitar', () => {
+        return request.delete('/api/guitars/589d04a8b6695bbdfd3106f1')
             .then(res => res.body)
             .then(result => {
                 assert.isFalse(result.removed);
